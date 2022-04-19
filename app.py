@@ -9,9 +9,9 @@ import secrets
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
-app.config['MYSQL_HOST'] = 'free-version.cmrhdeckeb9h.us-west-2.rds.amazonaws.com'
-app.config['MYSQL_USER'] = 'hazieq'
-app.config['MYSQL_PASSWORD'] = 'a0174552687'
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = '@Aa0174552687'
 app.config['MYSQL_DB'] = 'pythonlogin'
 
 mysql = MySQL(app)
