@@ -14,6 +14,7 @@ app.config['MYSQL_USER'] = 'bb09d462c08d07'
 app.config['MYSQL_PASSWORD'] = '2979179c'
 app.config['MYSQL_DB'] = 'heroku_4176c403d4233e5'
 app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SESSION_COOKIE_NAME'] = "my_session"
 mysql = MySQL(app)
 
 
