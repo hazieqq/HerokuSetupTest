@@ -9,7 +9,7 @@ import secrets
 app = Flask(__name__)
 app.secret_key = secrets.token_hex(16)
 
-app.config['MYSQL_HOST'] = ' us-cdbr-east-05.cleardb.net'
+app.config['MYSQL_HOST'] = 'us-cdbr-east-05.cleardb.net'
 app.config['MYSQL_USER'] = 'bb09d462c08d07'
 app.config['MYSQL_PASSWORD'] = '2979179c'
 app.config['MYSQL_DB'] = 'heroku_4176c403d4233e5'
