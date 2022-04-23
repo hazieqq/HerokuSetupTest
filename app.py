@@ -3,7 +3,7 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
 import secrets
-import os
+import logging
 
 
 app = Flask(__name__)
@@ -15,11 +15,12 @@ app.config['MYSQL_PASSWORD'] = '2979179c'
 app.config['MYSQL_DB'] = 'heroku_4176c403d4233e5'
 mysql = MySQL(app)
 
-
+logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
 # TODO : need to have a proper exception flow with try catch !!! 
 
 @app.route('/pythonlogin/', methods=['GET', 'POST'])
 def login():
+    app.logger.info('Info level log')
     msg = ''
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
         username = request.form['username']
